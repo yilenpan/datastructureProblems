@@ -3,5 +3,6 @@ module.exports = {
   Heap: require('./heap'),
   BinaryTree: require('./bst'),
   Trie: require('./trie'),
-  LinkedList: require('./linkedList')
+  LinkedList: require('./linkedList'),
+  range: require('./range')
 };

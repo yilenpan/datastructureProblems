@@ -23,3 +23,4 @@
 
 */
 var ds = require('./ds');
+var testCases = require('./test/problem3cases');

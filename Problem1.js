@@ -2,6 +2,7 @@
 var ds = require('./ds');
 var BinaryTree = ds.BinaryTree;
 var LinkedList = ds.LinkedList;
+var testCases = require('./test/problem1cases');
 
 /*
   Flatten a binary search tree into linked lists by levels, such that...
