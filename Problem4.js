@@ -7,45 +7,33 @@ var prefixes = require('./test/problem4cases').prefixes;
 var ds = require('./ds');
 var Trie = ds.Trie;
 
+// Takes the Array of words and adds each one into a trie
 var insertWords = function (words) {
   return words.reduce(function (trie, word) {
     insertWord(trie, word);
     return trie;
-  }, new Trie(null));
-};
-
-var insertWord = function (trie, word) {
-  if (!word.length) {
-    trie.isWord = true;
-    return;
-  }
-  trie.children[word[0]] = trie.children[word[0]] || new Trie(word[0]);
-  return insertWord(trie.children[word[0]], word.slice(1));
+  }, new Trie(null) /* ROOT OF TRIE */);
 };
 
 var getStartNode = function (trie, prefix) {
+  // Returns the trie that the prefix ends on, not the next one.
   if (prefix.length === 1) {
     return trie;
   }
   if (trie.children[prefix[0]]) {
     return getStartNode(trie.children[prefix[0]], prefix.slice(1));
   } else {
+    // If no corresponding children, just return the trie
     return trie;
   }
 };
 
+var insertWord = function (trie, word) {
+  // TODO: Implement
+};
+
 var getWordsFromPrefix = function (trie, prefix) {
-  var results = [];
-  var innerFn = function (trie, word) {
-    if (trie.isWord) {
-      results.push(word);
-    }
-    for (var child in trie.children) {
-      innerFn(trie.children[child], word + child);
-    }
-  };
-  innerFn(getStartNode(trie, prefix), prefix);
-  return results;
+  // TODO: Implement
 };
 
 var loadedDict = insertWords(dict);
