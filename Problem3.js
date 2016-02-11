@@ -22,8 +22,25 @@
 */
 var ds = require('./ds');
 var Graph = ds.Graph;
-var Heap = ds.Heap;
+var /* MYSTERY DS */ = ds./* MYSTERY DS */;
+
+var zombiePaths = function (map, start, end) {
+  // TODO: Implement
+};
+
+/////////////////////////////////////////////////////////////
+// TESTS
+/////////////////////////////////////////////////////////////
+
 var testCases = require('./test/problem3cases');
+testCases.forEach(function (tcase) {
+  console.log('Test Case, ', tcase);
+  console.log(zombiePaths(tcase, 'a', 'e'));
+});
+
+/////////////////////////////////////////////////////////////
+// HELPERS
+/////////////////////////////////////////////////////////////
 
 var parseMap = function (map) {
   var graph = new Graph();
@@ -44,13 +61,3 @@ var copy = function (extendingObj) {
   }
   return copy;
 };
-
-
-var zombiePaths = function (map, start, end) {
-  // TODO: Implement
-};
-
-testCases.forEach(function (tcase) {
-  console.log('Test Case, ', tcase);
-  console.log(zombiePaths(tcase, 'a', 'e'));
-});

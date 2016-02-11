@@ -2,10 +2,20 @@
   T9 Autocomplete
   Convert a prefix into a list of words starting with that prefix
 */
-var dict = require('./test/problem4cases').dict;
-var prefixes = require('./test/problem4cases').prefixes;
 var ds = require('./ds');
 var Trie = ds.Trie;
+
+var insertWord = function (trie, word) {
+  // TODO: Implement
+};
+
+var getWordsFromPrefix = function (trie, prefix) {
+  // TODO: Implement
+};
+
+/////////////////////////////////////////////////////////////
+// HELPERS
+/////////////////////////////////////////////////////////////
 
 // Takes the Array of words and adds each one into a trie
 var insertWords = function (words) {
@@ -28,14 +38,13 @@ var getStartNode = function (trie, prefix) {
   }
 };
 
-var insertWord = function (trie, word) {
-  // TODO: Implement
-};
 
-var getWordsFromPrefix = function (trie, prefix) {
-  // TODO: Implement
-};
+/////////////////////////////////////////////////////////////
+// TESTS
+/////////////////////////////////////////////////////////////
 
+var dict = require('./test/problem4cases').dict;
+var prefixes = require('./test/problem4cases').prefixes;
 var loadedDict = insertWords(dict);
 prefixes.forEach(function (prefix) {
   console.log('Prefix', prefix);

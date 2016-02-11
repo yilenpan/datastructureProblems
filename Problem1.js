@@ -1,15 +1,15 @@
 /*
 Flatten a binary search tree into linked lists by levels, such that...
 
-      4
-  2       6
-1  3     5  7
-Flattens to...
-{
-  0: {4},
-  1: {2} -> {6},
-  3: {1} -> {3} -> {5} -> {7}
-}
+            4
+        2       6
+      1  3     5  7
+      Flattens to...
+      {
+        0: {4},
+        1: {2} -> {6},
+        3: {1} -> {3} -> {5} -> {7}
+      }
 
 NOTE: feel free to rewrite any methods.
 NOTE: Linked List does not have to be in order
@@ -28,6 +28,12 @@ BinaryTree.prototype.levelInsert = function () {
   // TODO: Implement
 };
 
+
+
+
+/////////////////////////////////////////////////////////////
+// TESTS
+/////////////////////////////////////////////////////////////
 
 // Makes array Binary Trees
 testCases.map(function (testCase) {
