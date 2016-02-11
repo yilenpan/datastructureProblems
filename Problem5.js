@@ -41,5 +41,7 @@ CustomDataStructure.prototype.delete = function (key) {
   return this.storage.remove(key)[1];
 };
 CustomDataStructure.prototype.random = function () {
-  return this.storage.get(this.map[Math.floor(Math.random() * this.map.length)]);
+  return this.storage.get(this.map[Math.floor(Math.random() * this.map.length)])[1];
 };
+
+module.exports = CustomDataStructure;
