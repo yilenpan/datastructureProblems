@@ -1,10 +1,6 @@
 var BinaryTree = require('../ds').BinaryTree;
 var range = require('../ds').range;
-var Node = function (value) {
-  this.value = value;
-  this.right = null;
-  this.left = null;
-};
+var Node = require('../ds').BSTNode;
 
 BinaryTree.prototype.badInsert = function (value, currentNode) {
   if (!this.root) {
