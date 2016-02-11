@@ -6,9 +6,12 @@
   Constant time deletion
   Constant time randomization
 */
+var /* FILL ME OUT */ = require('./ds')./* FILL ME OUT */;
 
-var CustomDataStructure = function () {/* TODO: Implement me */};
-CustomDataStructure.prototype.insert = function () {/* TODO: Implement me */};
-CustomDataStructure.prototype.get = function () {/* TODO: Implement me */};
-CustomDataStructure.prototype.delete = function () {/* TODO: Implement me */};
-CustomDataStructure.prototype.random = function () {/* TODO: Implement me */};
+var CustomDataStructure = function () {/* TODO: Implement */};
+CustomDataStructure.prototype.insert = function () {/* TODO: Implement */};
+CustomDataStructure.prototype.get = function () {/* TODO: Implement */};
+CustomDataStructure.prototype.delete = function () {/* TODO: Implement */};
+CustomDataStructure.prototype.random = function () {/* TODO: Implement */};
+
+module.exports = CustomDataStructure;

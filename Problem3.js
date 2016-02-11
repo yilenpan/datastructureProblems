@@ -16,11 +16,48 @@
 
   You have a zombie blaster, which you can only use once to BLAST away
   all of the zombies.
-  You also have a zombie gun which you can only use once, and it will blast
-  half of the zombies away.
 
   Find the shortest path from point 'a' to 'e'
 
 */
 var ds = require('./ds');
+var Graph = ds.Graph;
+var /* MYSTERY DS */ = ds./* MYSTERY DS */;
+
+var zombiePaths = function (map, start, end) {
+  // TODO: Implement
+};
+
+/////////////////////////////////////////////////////////////
+// TESTS
+/////////////////////////////////////////////////////////////
+
 var testCases = require('./test/problem3cases');
+testCases.forEach(function (tcase) {
+  console.log('Test Case, ', tcase);
+  console.log(zombiePaths(tcase, 'a', 'e'));
+});
+
+/////////////////////////////////////////////////////////////
+// HELPERS
+/////////////////////////////////////////////////////////////
+
+var parseMap = function (map) {
+  var graph = new Graph();
+  map.forEach(function (testCase) {
+    graph.addEdge(testCase[0], testCase[1], testCase[2]);
+  });
+  return graph;
+};
+
+var copy = function (extendingObj) {
+  var copy = {};
+  for (var key in extendingObj) {
+    if (Array.isArray(extendingObj[key])) {
+      copy[key] = extendingObj[key].slice();
+    } else {
+      copy[key] = extendingObj[key];
+    }
+  }
+  return copy;
+};

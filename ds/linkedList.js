@@ -38,4 +38,13 @@ LinkedList.prototype.contains = function(target, currentNode) {
   return this.contains(target, currentNode.next);
 };
 
+LinkedList.prototype.traverse = function (cb, currentNode) {
+  currentNode = currentNode === undefined ? this.head : currentNode;
+  if (currentNode === null) {
+    return;
+  }
+  cb(currentNode);
+  this.traverse(cb, currentNode.next);
+};
+
 module.exports = LinkedList;
